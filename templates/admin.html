@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+            </style>
+        <link rel="stylesheet" href="./static/style-admin.css">
+    
+</head>
+<body>
+    {% with messages=get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+
+        <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>{{message}}</strong> 
+        </div>
+
+          {% endfor %}
+          {% endif %}
+          {% endwith %}
+    <div>
+        <div  class="Leftbox">
+            <p  style="margin-top: 15%; position: absolute; left:3.52%; right: 13.11%;">
+                <div class="logo-index">
+                <svg width="511" height="528" viewBox="0 0 511 528" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                    <path d="M109.75 396C86.3292 396 67.3796 415.8 67.3796 440C67.3796 464.2 86.3292 484 109.75 484C133.171 484 152.333 464.2 152.333 440C152.333 415.8 133.171 396 109.75 396ZM322.667 396C299.246 396 280.296 415.8 280.296 440C280.296 464.2 299.246 484 322.667 484C346.088 484 365.25 464.2 365.25 440C365.25 415.8 346.088 396 322.667 396ZM291.794 286C307.763 286 321.815 276.98 329.054 263.34L405.278 120.56C413.156 106.04 402.936 88 386.755 88H71.6379L51.6238 44H-18V88H24.5833L101.233 254.98L72.4896 308.66C56.9467 338.14 77.3867 374 109.75 374H365.25V330H109.75L133.171 286H291.794ZM91.865 132H350.559L291.794 242H142.326L91.865 132Z" fill="#ADB6C4"/>
+                    <path d="M145.75 396C122.329 396 103.38 415.8 103.38 440C103.38 464.2 122.329 484 145.75 484C169.171 484 188.333 464.2 188.333 440C188.333 415.8 169.171 396 145.75 396ZM358.667 396C335.246 396 316.296 415.8 316.296 440C316.296 464.2 335.246 484 358.667 484C382.088 484 401.25 464.2 401.25 440C401.25 415.8 382.088 396 358.667 396ZM327.794 286C343.763 286 357.815 276.98 365.054 263.34L441.278 120.56C449.156 106.04 438.936 88 422.755 88H107.638L87.6238 44H18V88H60.5833L137.233 254.98L108.49 308.66C92.9467 338.14 113.387 374 145.75 374H401.25V330H145.75L169.171 286H327.794ZM127.865 132H386.559L327.794 242H178.326L127.865 132Z" fill="#001B2E"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0">
+                    <rect width="511" height="528" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+          
+        </div>
+
+        <div>
+
+        <div>
+           <p style="position: absolute; left: 7%; font-size: 24px; margin-top: 3%; color: #ADB6C4;">Shop With Us</p>
+        </div>
+        <div class="title">
+            <a href="#" style="color: #ADB6C4;">Inventory</a><br><br>
+            <a href="#" style="color: #ADB6C4;">Vendors</a><br><br>
+            <a href="#" style="color: #ADB6C4;">Transactions</a><br><br>
+            <a href="/logout" style="color: #ADB6C4;">Sign out</a><br>
+        </div>
+    </div>
+</body>
+</html>

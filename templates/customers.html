@@ -4,7 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./static/style-user.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="static/style-user.css">
 </head>
 <body>
 
@@ -22,6 +23,18 @@
             </defs>
             </svg>
     </div>
+    {% with messages=get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+
+        <div class="alert alert-{{category}} alert-dismissible fade show">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>{{message}}</strong> 
+        </div>
+
+          {% endfor %}
+          {% endif %}
+          {% endwith %}
     <div class="heading">
         <p>Shop With Us</p>
     </div>
@@ -30,30 +43,35 @@
             <path d="M28.3333 12.6667L25.9833 14.8992L28.6167 17.4167H15V20.5833H28.6167L25.9833 23.085L28.3333 25.3333L35 19L28.3333 12.6667ZM8.33333 7.91667H20V4.75H8.33333C6.5 4.75 5 6.175 5 7.91667V30.0833C5 31.825 6.5 33.25 8.33333 33.25H20V30.0833H8.33333V7.91667Z" fill="#ADB6C4"/>
             </svg>
       </a>
-  <a class="active" href="#home">Home</a>
+       <a href="/personal-info">Personal info</a>
+       <a href="#Orders">Orders</a>
   <a href="#news">Products</a>
-  <a href="#Orders">Orders</a>
-  <a href="#personal-info">Personal info</a>
   
 
 </div>
+<!-- 
+<div class="card" style="width: 18rem;margin-left:10%;margin-top:5%">
+ -->
+  <!--<img src="..." class="card-img-top" alt="..."> image commented out can be added later-->
 
-<div style="padding-left:16px">
-  <h2>Top Navigation Example</h2>
-  {% with messages=get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-        {% for category, message in messages %}
-
-        <div class="alert">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-        <strong>{{message}}</strong> 
-        </div>
-
-          {% endfor %}
-          {% endif %}
-          {% endwith %}
-  <p>Some content..</p>
-</div>
+  <!--here is the code for the card-->
+  <!-- 
+  <div class="card-body">
+    {%for post in query%}
+    <h5 class="card-title">{{post.username}}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{post.email}}</li>
+    <li class="list-group-item">{{post.address}}</li>
+    <li class="list-group-item">{{post.ph_no}}</li>
+  </ul>
+   {% endfor %}
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div> -->
 
 <footer class= "footer">
     <p class = "footer">Shop With Us<br>
