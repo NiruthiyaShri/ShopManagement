@@ -27,22 +27,54 @@
         
         <div class="right">
             <div class="right-box" style="background: #F5F1ED;">
-                    <div class="button-group" style="margin-left:30%;margin-top: 30%;">
-                    <button type="button" class="btn btn-block btn-lg btn-block" onclick="location.href='/admin';" style="width:60%;background-color :#ADB6C4;color:#2F2E41;box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.25);">Admin</button>
-                    <button type="button" class="btn btn-block btn-lg btn-block" onclick="document.getElementById('id01').style.display='block'" style="width:60%;background-color :#ADB6C4;color:#2F2E41;box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.25);">Login</button>
-                    <button type="button" class="btn btn-block btn-lg btn-block" onclick="document.getElementById('id02').style.display='block'" style="width:60%;background-color :#ADB6C4;color:#2F2E41;box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.25);">Sign Up</button>
-                    </div>
-                    <!--
-                    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Shopkeeper</button>
+            	{% with messages=get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
 
-                    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"> Sign Up</button>
-                    
-                    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
-                -->
+        <div class="alert alert-{{category}} alert-dismissible fade show">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>{{message}}</strong> 
+        </div>
+
+          {% endfor %}
+          {% endif %}
+          {% endwith %}
+                    <div class="button-group" style="margin-left:30%;margin-top: 30%;">
+                    <button type="button" class="btn btn-block btn-lg btn-block" onclick="document.getElementById('id00').style.display='block'" style="width:60%;background-color :#ADB6C4;color:#2F2E41;box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.25);">Admin</button>
+                    <button type="button" class="btn btn-block btn-lg btn-block" onclick="document.getElementById('id01').style.display='block'" style="width:60%;background-color :#ADB6C4;color:#2F2E41;box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.25);">Sign Up</button>
+                    <button type="button" class="btn btn-block btn-lg btn-block" onclick="document.getElementById('id02').style.display='block'" style="width:60%;background-color :#ADB6C4;color:#2F2E41;box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.25);">Login</button>
+                    </div>
+                
              </div>
                
             </div>
         </div>
+        <div id="id00" class="modal">
+            <span onclick="document.getElementById('id00').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+            <form class="modal-content" action="/admin" method = "POST">
+              <div class="container">
+                <h1 style="font-family: 'Shadows Into Light', cursive;   mix-blend-mode: darken;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                transform: rotate(-0.12deg);">Sign in (only for admin)</h1>
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+
+          
+                <label>
+                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+          
+                <div class="clearfix">
+                  <button type="button" onclick="document.getElementById('id00').style.display='none'" class="cancelbtn">Cancel</button>
+                  <button type="submit" class="signupbtn">Sign in</button>
+                </div>
+              </div>
+            </form>
+          </div>
 
 
         <div id="id01" class="modal">
@@ -112,7 +144,7 @@
           </div>
           
 
-          <script>
+           <script>
             // Get the modal
             var modal = document.getElementById('id01');
             
@@ -129,6 +161,15 @@
             window.onclick = function(event) {
               if (event.target == modal1) {
                 modal1.style.display = "none";
+              }
+            }
+
+            var modal2 = document.getElementById('id00');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal2) {
+                modal2.style.display = "none";
               }
             }
             </script>
