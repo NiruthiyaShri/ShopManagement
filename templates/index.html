@@ -3,88 +3,42 @@
     <head>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap" rel="stylesheet">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
             </style>
-          <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
-        <link rel="stylesheet" href="./static/style.css">
+        <link rel="stylesheet" href="static/style.css">
 
     
     </head>
 
-    <body>
+    <body style="background: #F5F1ED;">
         <div class="left">
     <h1 class="index-heading" class="text-highlight" class="heading" style="  height: 103.72px; font-family: 'Shadows Into Light', cursive;   mix-blend-mode: darken;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     transform: rotate(-0.12deg);
     color: #001B2E; ">Shop With Us</h1>
-
-            <div class="logo-index">
-                <svg width="511" height="528" viewBox="0 0 511 528" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0)">
-                    <path d="M109.75 396C86.3292 396 67.3796 415.8 67.3796 440C67.3796 464.2 86.3292 484 109.75 484C133.171 484 152.333 464.2 152.333 440C152.333 415.8 133.171 396 109.75 396ZM322.667 396C299.246 396 280.296 415.8 280.296 440C280.296 464.2 299.246 484 322.667 484C346.088 484 365.25 464.2 365.25 440C365.25 415.8 346.088 396 322.667 396ZM291.794 286C307.763 286 321.815 276.98 329.054 263.34L405.278 120.56C413.156 106.04 402.936 88 386.755 88H71.6379L51.6238 44H-18V88H24.5833L101.233 254.98L72.4896 308.66C56.9467 338.14 77.3867 374 109.75 374H365.25V330H109.75L133.171 286H291.794ZM91.865 132H350.559L291.794 242H142.326L91.865 132Z" fill="#ADB6C4"/>
-                    <path d="M145.75 396C122.329 396 103.38 415.8 103.38 440C103.38 464.2 122.329 484 145.75 484C169.171 484 188.333 464.2 188.333 440C188.333 415.8 169.171 396 145.75 396ZM358.667 396C335.246 396 316.296 415.8 316.296 440C316.296 464.2 335.246 484 358.667 484C382.088 484 401.25 464.2 401.25 440C401.25 415.8 382.088 396 358.667 396ZM327.794 286C343.763 286 357.815 276.98 365.054 263.34L441.278 120.56C449.156 106.04 438.936 88 422.755 88H107.638L87.6238 44H18V88H60.5833L137.233 254.98L108.49 308.66C92.9467 338.14 113.387 374 145.75 374H401.25V330H145.75L169.171 286H327.794ZM127.865 132H386.559L327.794 242H178.326L127.865 132Z" fill="#001B2E"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0">
-                    <rect width="511" height="528" fill="white"/>
-                    </clipPath>
-                    </defs>
-                    </svg>
-                    
-            </div>
+        
+        <img src="static/undraw_shopping_app_flsj.svg" height="50%" width="50%">
+     
         </div>
+        
         <div class="right">
-
-            <div class="right-box">
-           <div style="padding-left:16px">
-
-  {% with messages=get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-        {% for category, message in messages %}
-
-        <div class="alert alert-{{category}} alert-dismissible fade show">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-        <strong>{{message}}</strong> 
-        </div>
-
-          {% endfor %}
-          {% endif %}
-          {% endwith %}
-             
-                    <div class="button" style="margin-top: 30%;">
-
-                        
-                        <p class="p-button"> 
-                            <svg width="30" height="30" viewBox="0 0 46 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M41.975 17.4096L39.9625 8.85167C39.5409 7.08917 38.0459 5.875 36.3017 5.875H9.67918C7.95418 5.875 6.44001 7.10875 6.03751 8.85167L4.02501 17.4096C3.56501 19.4071 3.98668 21.4438 5.21335 23.0496C5.36668 23.265 5.57751 23.4217 5.75001 23.6175V37.2083C5.75001 39.3625 7.47501 41.125 9.58335 41.125H36.4167C38.525 41.125 40.25 39.3625 40.25 37.2083V23.6175C40.4225 23.4413 40.6334 23.265 40.7867 23.0692C42.0134 21.4633 42.4542 19.4071 41.975 17.4096ZM36.2442 9.77208L38.2567 18.33C38.4483 19.1525 38.2758 19.975 37.7775 20.6213C37.5092 20.9738 36.9342 21.5417 35.9759 21.5417C34.8067 21.5417 33.7908 20.5821 33.6567 19.3092L32.545 9.79167L36.2442 9.77208ZM24.9167 9.79167H28.6733L29.7083 18.6433C29.8042 19.4071 29.5742 20.1708 29.0758 20.7388C28.6542 21.2479 28.0408 21.5417 27.255 21.5417C25.9708 21.5417 24.9167 20.3862 24.9167 18.9762V9.79167ZM16.2725 18.6433L17.3267 9.79167H21.0833V18.9762C21.0833 20.3862 20.0292 21.5417 18.6108 21.5417C17.9592 21.5417 17.365 21.2479 16.905 20.7388C16.4258 20.1708 16.1958 19.4071 16.2725 18.6433ZM7.74335 18.33L9.67918 9.79167H13.455L12.3433 19.3092C12.19 20.5821 11.1933 21.5417 10.0242 21.5417C9.08501 21.5417 8.49085 20.9738 8.24168 20.6213C7.72418 19.9946 7.55168 19.1525 7.74335 18.33ZM9.58335 37.2083V25.3996C9.73668 25.4192 9.87085 25.4583 10.0242 25.4583C11.6917 25.4583 13.2058 24.7533 14.3175 23.5979C15.4675 24.7729 17.0008 25.4583 18.745 25.4583C20.4125 25.4583 21.9075 24.7533 23.0192 23.6371C24.15 24.7533 25.6833 25.4583 27.4083 25.4583C29.0183 25.4583 30.5517 24.7729 31.7017 23.5979C32.8134 24.7533 34.3275 25.4583 35.995 25.4583C36.1484 25.4583 36.2825 25.4192 36.4359 25.3996V37.2083H9.58335Z" fill="#001B2E"/>
-                                </svg>
-                        <a href="#" class="a-button">Shopkeeper </a>
-                        </p>
-                        
+            <div class="right-box" style="background: #F5F1ED;">
+                    <div class="button-group" style="margin-left:30%;margin-top: 30%;">
+                    <button type="button" class="btn btn-block btn-lg btn-block" onclick="location.href='/admin';" style="width:60%;background-color :#ADB6C4;color:#2F2E41;box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.25);">Admin</button>
+                    <button type="button" class="btn btn-block btn-lg btn-block" onclick="document.getElementById('id01').style.display='block'" style="width:60%;background-color :#ADB6C4;color:#2F2E41;box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.25);">Login</button>
+                    <button type="button" class="btn btn-block btn-lg btn-block" onclick="document.getElementById('id02').style.display='block'" style="width:60%;background-color :#ADB6C4;color:#2F2E41;box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.25);">Sign Up</button>
                     </div>
+                    <!--
+                    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Shopkeeper</button>
 
-                    <div class="button" style="top:50%;">
-                  
-                            <svg width="30" height="30" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.1 7.11111L14.44 9.6L19.38 14.2222H0V17.7778H19.38L14.44 22.4L17.1 24.8889L26.6 16L17.1 7.11111ZM34.2 28.4444H19V32H34.2C36.29 32 38 30.4 38 28.4444V3.55556C38 1.6 36.29 0 34.2 0H19V3.55556H34.2V28.4444Z" fill="#001B2E"/>
-                                </svg>
-                                
-                                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+                    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"> Sign Up</button>
                     
-                    </div>
-                
-                    <div class="button" style="top:75%;">
-                    
-                            <svg width="30" height="30" viewBox="0 0 46 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M23 11.75C25.1083 11.75 26.8333 13.5125 26.8333 15.6667C26.8333 17.8208 25.1083 19.5833 23 19.5833C20.8917 19.5833 19.1667 17.8208 19.1667 15.6667C19.1667 13.5125 20.8917 11.75 23 11.75ZM23 29.375C28.175 29.375 34.1167 31.9012 34.5 33.2917V35.25H11.5V33.3112C11.8833 31.9012 17.825 29.375 23 29.375ZM23 7.83334C18.7642 7.83334 15.3333 11.3388 15.3333 15.6667C15.3333 19.9946 18.7642 23.5 23 23.5C27.2358 23.5 30.6667 19.9946 30.6667 15.6667C30.6667 11.3388 27.2358 7.83334 23 7.83334ZM23 25.4583C17.8825 25.4583 7.66667 28.0825 7.66667 33.2917V39.1667H38.3333V33.2917C38.3333 28.0825 28.1175 25.4583 23 25.4583Z" fill="#001B2E"/>
-                                </svg>
-                                
-                                <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
-                
-                    </div>
+                    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
+                -->
              </div>
                
             </div>
